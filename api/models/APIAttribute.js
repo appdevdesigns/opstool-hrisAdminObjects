@@ -3,43 +3,41 @@
  *
  * @module      :: Model
  * @description :: A short summary of how this model works and what it represents.
- * @docs		:: http://sailsjs.org/#!documentation/models
+ * @docs        :: http://sailsjs.org/#!documentation/models
  */
 
 module.exports = {
 
-  adapter:"mysql",
+    connection: ['mysql'],
+
+    attributes: {
+
+        /* e.g.
+        nickname: 'string'
+        */
+
+        attributeset_id : 'INTEGER',
 
 
-
-  attributes: {
-  	
-  	/* e.g.
-  	nickname: 'string'
-  	*/
-    
-    attributeset_id	: 'INTEGER',
+        attribute_label : 'STRING',
 
 
-    attribute_label	: 'STRING',
+        attribute_question  : 'STRING',
 
 
-    attribute_question	: 'STRING',
+        attribute_column    : 'STRING',
 
 
-    attribute_column	: 'STRING',
+        attribute_datatype  : 'STRING',
 
 
-    attribute_datatype	: 'STRING',
+        meta    : 'STRING',
 
 
-    meta	: 'STRING',
+        attribute_permission    : 'STRING',
 
 
-    attribute_permission	: 'STRING',
-
-
-    attribute_uniqueKey	: 'INTEGER'
-  }
+        attribute_uniqueKey : 'INTEGER'
+    }
 
 };
