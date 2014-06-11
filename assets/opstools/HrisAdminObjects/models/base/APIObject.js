@@ -4,7 +4,7 @@ steal(
 
 
     AD.models_base.APIObject = can.Model.extend({
-        findAll: 'GET /opstool-hrisAdminObjects/apiobject',
+        findAll: 'GET /opstool-hrisAdminObjects/apiobject/find',
         findOne: 'GET /opstool-hrisAdminObjects/apiobject/{id}',
         create:  'POST /opstool-hrisAdminObjects/apiobject/create',
         update:  'PUT /opstool-hrisAdminObjects/apiobject/update/{id}',

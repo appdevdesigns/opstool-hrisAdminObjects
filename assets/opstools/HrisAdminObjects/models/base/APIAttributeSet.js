@@ -4,7 +4,7 @@ steal(
 
 
     AD.models_base.APIAttributeSet = can.Model.extend({
-        findAll: 'GET /opstool-hrisAdminObjects/apiattributeset',
+        findAll: 'GET /opstool-hrisAdminObjects/apiattributeset/find',
         findOne: 'GET /opstool-hrisAdminObjects/apiattributeset/{id}',
         create:  'POST /opstool-hrisAdminObjects/apiattributeset/create',
         update:  'PUT /opstool-hrisAdminObjects/apiattributeset/update/{id}',
