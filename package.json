@@ -1,6 +1,6 @@
 {
   "name": "opstool-hrisAdminObjects",
-  "version": "0.0.0",
+  "version": "0.2.0",
   "description": "(plugin) This tool allows an HRIS administrator to configure the data being saved in HRIS.",
   "main": "module.js",
   "directories": {
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/appdevdesigns/opstool-hrisAdminObjects",
   "dependencies": {
-    "ad-utils": "git://github.com/appdevdesigns/ad-utils#v10"
+    "ad-utils": "git://github.com/appdevdesigns/ad-utils"
   },
   "devDependencies": {
     "chai": "^1.9.1",
