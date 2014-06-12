@@ -67,7 +67,7 @@ function(){
             this.element.html(can.view(this.options.templateDOM, {} ));
 
             // add in the GenericList to our object list div
-            this.list = new AD.controllers.GenericList(this.element.find('.hris-list-object'), {
+            this.list = new AD.controllers.GenericList(this.element.find('.hrisadminobject-list-object'), {
                 title:'Objects',
                 description: '<em>Objects</em> lets you add, delete, and configure the objects available in the HRIS system.',
 //                dataSource:[],  //this.dataSource,
