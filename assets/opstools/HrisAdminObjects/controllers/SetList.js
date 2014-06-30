@@ -76,7 +76,7 @@ function(){
             this.element.html(can.view(this.options.templateDOM, {} ));
 
          // add in the GenericList to our object list div
-            this.list = new AD.controllers.GenericList(this.element.find('.hris-list-attributeset'), {
+            this.list = new AD.controllers.GenericList(this.element.find('.hrisadminobject-list-attributeset'), {
                 title:'Attribute Sets',
                 description: '<em>Attribute Sets</em> belong to <em>Objects</em> and contain categorized attributes belonging to an object.',
 //                dataSource:[],  //this.dataSource,

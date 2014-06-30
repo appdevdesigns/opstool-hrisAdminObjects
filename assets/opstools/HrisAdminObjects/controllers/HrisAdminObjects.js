@@ -36,12 +36,12 @@ function(){
 
             this.initDOM();
 
-            new AD.controllers.opstools.HrisAdminObjects.ObjectList(this.element.find('.hris-object-widget'), {});
-            new AD.controllers.opstools.HrisAdminObjects.SetList(this.element.find('.hris-set-widget'), {});
-            new AD.controllers.opstools.HrisAdminObjects.AttrList(this.element.find('.hris-attr-widget'), {});
-            new AD.controllers.opstools.HrisAdminObjects.FormObjectNew(this.element.find('.tool-hris-form-object-new'), {});
-            new AD.controllers.opstools.HrisAdminObjects.FormSetNew(this.element.find('.tool-hris-form-set-new'), {});
-            new AD.controllers.opstools.HrisAdminObjects.FormAttrNew(this.element.find('.tool-hris-form-attribute-new'), {});
+            new AD.controllers.opstools.HrisAdminObjects.ObjectList(this.element.find('.hrisadminobject-object-widget'), {});
+            new AD.controllers.opstools.HrisAdminObjects.SetList(this.element.find('.hrisadminobject-set-widget'), {});
+            new AD.controllers.opstools.HrisAdminObjects.AttrList(this.element.find('.hrisadminobject-attr-widget'), {});
+            new AD.controllers.opstools.HrisAdminObjects.FormObjectNew(this.element.find('.tool-hrisadminobject-form-object-new'), {});
+            new AD.controllers.opstools.HrisAdminObjects.FormSetNew(this.element.find('.tool-hrisadminobject-form-set-new'), {});
+            new AD.controllers.opstools.HrisAdminObjects.FormAttrNew(this.element.find('.tool-hrisadminobject-form-attribute-new'), {});
 
 			this.element.find('.tt').tooltip(options);
 			this.element.find('.tt-field').tooltip({placement: 'left'});

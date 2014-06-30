@@ -92,7 +92,7 @@ function(){
 
 
             this.element.html(can.view(this.options.templateDOM, {} ));
-            this.list = new AD.controllers.GenericList(this.element.find('.hris-list-attribute'), {
+            this.list = new AD.controllers.GenericList(this.element.find('.hrisadminobject-list-attribute'), {
                 title:'Attributes',
                 description: '<em>Attributes</em> belong to <em>Attribute Sets</em> and represent properties of an object.',
 //                dataSource:[],  //this.dataSource,
