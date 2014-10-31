@@ -5,10 +5,7 @@ steal(
 function(){
 
 
-
-    if (typeof AD.controllers.opstools == 'undefined') AD.controllers.opstools = {};
-    if (typeof AD.controllers.opstools.HrisAdminObjects == 'undefined') AD.controllers.opstools.HrisAdminObjects = {};
-    AD.controllers.opstools.HrisAdminObjects.FormAttrNew = can.Control.extend({
+    AD.Control.extend('opstools.HrisAdminObjects.FormAttrNew', {
 
 
         init: function( element, options ) {
