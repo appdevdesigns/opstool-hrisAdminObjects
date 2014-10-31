@@ -9,9 +9,8 @@ steal(
         '//opstools/HrisAdminObjects/models/APIObject.js',
 function(){
 
-    if (typeof AD.controllers.opstools == 'undefined') AD.controllers.opstools = {};
-    if (typeof AD.controllers.opstools.HrisAdminObjects == 'undefined') AD.controllers.opstools.HrisAdminObjects = {};
-    AD.controllers.opstools.HrisAdminObjects.ObjectList = can.Control.extend({
+
+    AD.Control.extend('opstools.HrisAdminObjects.ObjectList', {
 
 
         init: function( element, options ) {

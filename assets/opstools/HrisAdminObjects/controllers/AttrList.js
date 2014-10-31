@@ -7,9 +7,7 @@ steal(
 function(){
 
 
-    if (typeof AD.controllers.opstools == 'undefined') AD.controllers.opstools = {};
-    if (typeof AD.controllers.opstools.HrisAdminObjects == 'undefined') AD.controllers.opstools.HrisAdminObjects = {};
-    AD.controllers.opstools.HrisAdminObjects.AttrList = can.Control.extend({
+    AD.Control.extend('opstools.HrisAdminObjects.AttrList', {
 
 
         init: function( element, options ) {
@@ -30,12 +28,12 @@ function(){
             // listen for resize notifications
             AD.comm.hub.subscribe('hrisadminobjects.resize', function (key, data) {
 
-//				self.element.css("height", (data.height/2) + "px");
+//              self.element.css("height", (data.height/2) + "px");
 
-//				var mastheadHeight = self.element.find(".hris-widget-masthead").outerHeight(true);
-				self.list.resize(data.height/2);
+//              var mastheadHeight = self.element.find(".hris-widget-masthead").outerHeight(true);
+                self.list.resize(data.height/2);
 
-//				self.element.find(".hris-widget-inner").css("padding-top", (mastheadHeight+5) + "px");
+//              self.element.find(".hris-widget-inner").css("padding-top", (mastheadHeight+5) + "px");
             });
 
 
@@ -111,6 +109,5 @@ function(){
 
 
     });
-
 
 });

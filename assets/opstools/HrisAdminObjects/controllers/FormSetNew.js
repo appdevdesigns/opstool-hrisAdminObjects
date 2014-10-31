@@ -6,10 +6,7 @@ function(){
 
 
 
-    if (typeof AD.controllers.opstools == 'undefined') AD.controllers.opstools = {};
-    if (typeof AD.controllers.opstools.HrisAdminObjects == 'undefined') AD.controllers.opstools.HrisAdminObjects = {};
-    AD.controllers.opstools.HrisAdminObjects.FormSetNew = can.Control.extend({
-
+    AD.Control.extend('opstools.HrisAdminObjects.FormSetNew', {
 
         init: function( element, options ) {
             var self = this;
