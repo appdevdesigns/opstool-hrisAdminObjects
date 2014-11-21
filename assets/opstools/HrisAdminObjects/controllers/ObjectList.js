@@ -1,23 +1,24 @@
 
 steal(
         // List your Controller's dependencies here:
-        'appdev',
+        // 'appdev',
 //        'HrisUI/models/Projects.js',
 //        'appdev/widgets/ad_delete_ios/ad_delete_ios.js',
 //        'HrisUI/views/ObjectList/ObjectList.ejs',
         '//js/GenericList.js',
         '//opstools/HrisAdminObjects/models/APIObject.js',
+        'opstools/HrisAdminObjects/views/ObjectList/ObjectList.ejs',
+        'opstools/HrisAdminObjects/views/ObjectList/item.ejs',
 function(){
 
-    if (typeof AD.controllers.opstools == 'undefined') AD.controllers.opstools = {};
-    if (typeof AD.controllers.opstools.HrisAdminObjects == 'undefined') AD.controllers.opstools.HrisAdminObjects = {};
-    AD.controllers.opstools.HrisAdminObjects.ObjectList = can.Control.extend({
+
+    AD.Control.extend('opstools.HrisAdminObjects.ObjectList', {
 
 
         init: function( element, options ) {
             var self = this;
             this.options = AD.defaults({
-                    templateDOM: '//opstools/HrisAdminObjects/views/ObjectList/ObjectList.ejs',
+                    templateDOM: '//opstools/HrisAdminObjects/views/ObjectList/ObjectList.ejs'
             }, options);
 
 
@@ -67,7 +68,7 @@ function(){
             this.element.html(can.view(this.options.templateDOM, {} ));
 
             // add in the GenericList to our object list div
-            this.list = new AD.controllers.GenericList(this.element.find('.hris-list-object'), {
+            this.list = new AD.controllers.GenericList(this.element.find('.hrisadminobject-list-object'), {
                 title:'Objects',
                 description: '<em>Objects</em> lets you add, delete, and configure the objects available in the HRIS system.',
 //                dataSource:[],  //this.dataSource,

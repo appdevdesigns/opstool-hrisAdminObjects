@@ -2,20 +2,19 @@
 steal(
         // List your Controller's dependencies here:
         'appdev',
-        'js/GenericList.js',
+        'GenericList.js',  // provided by OpsPortal
         'opstools/HrisAdminObjects/models/APIAttributeSet.js',
+        'opstools/HrisAdminObjects/views/SetList/SetList.ejs',
+        'opstools/HrisAdminObjects/views/SetList/item.ejs',
 function(){
 
 
-    if (typeof AD.controllers.opstools == 'undefined') AD.controllers.opstools = {};
-    if (typeof AD.controllers.opstools.HrisAdminObjects == 'undefined') AD.controllers.opstools.HrisAdminObjects = {};
-    AD.controllers.opstools.HrisAdminObjects.SetList = can.Control.extend({
-
+    AD.Control.extend('opstools.HrisAdminObjects.SetList', {
 
         init: function( element, options ) {
             var self = this;
             this.options = AD.defaults({
-                    templateDOM: '//opstools/HrisAdminObjects/views/SetList/SetList.ejs',
+                    templateDOM: '//opstools/HrisAdminObjects/views/SetList/SetList.ejs'
             }, options);
 
             this.dataSource = this.options.dataSource; // AD.models.Projects;
@@ -76,7 +75,7 @@ function(){
             this.element.html(can.view(this.options.templateDOM, {} ));
 
          // add in the GenericList to our object list div
-            this.list = new AD.controllers.GenericList(this.element.find('.hris-list-attributeset'), {
+            this.list = new AD.controllers.GenericList(this.element.find('.hrisadminobject-list-attributeset'), {
                 title:'Attribute Sets',
                 description: '<em>Attribute Sets</em> belong to <em>Objects</em> and contain categorized attributes belonging to an object.',
 //                dataSource:[],  //this.dataSource,
@@ -91,7 +90,7 @@ function(){
         '.ad-item-add click': function($el, ev) {
 
             ev.preventDefault();
-        },
+        }
 
 
     });

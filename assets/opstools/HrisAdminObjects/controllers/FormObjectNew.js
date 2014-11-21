@@ -2,19 +2,16 @@
 steal(
         // List your Controller's dependencies here:
         'appdev',
+        'opstools/HrisAdminObjects/views/FormObjectNew/FormObjectNew.ejs',
 function(){
 
 
-
-    if (typeof AD.controllers.opstools == 'undefined') AD.controllers.opstools = {};
-    if (typeof AD.controllers.opstools.HrisAdminObjects == 'undefined') AD.controllers.opstools.HrisAdminObjects = {};
-    AD.controllers.opstools.HrisAdminObjects.FormObjectNew = can.Control.extend({
-
+    AD.Control.extend('opstools.HrisAdminObjects.FormObjectNew', {
 
         init: function( element, options ) {
             var self = this;
             this.options = AD.defaults({
-                    templateDOM: '//opstools/HrisAdminObjects/views/FormObjectNew/FormObjectNew.ejs',
+                    templateDOM: '//opstools/HrisAdminObjects/views/FormObjectNew/FormObjectNew.ejs'
             }, options);
 
             this.dataSource = this.options.dataSource; // AD.models.Projects;
@@ -55,7 +52,7 @@ function(){
         '.ad-item-add click': function($el, ev) {
 
             ev.preventDefault();
-        },
+        }
 
 
     });

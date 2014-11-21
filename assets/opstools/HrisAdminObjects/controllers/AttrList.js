@@ -1,21 +1,21 @@
 
 steal(
         // List your Controller's dependencies here:
-        'appdev',
-        'js/GenericList.js',
+        // 'appdev',
+        'GenericList.js',
         'opstools/HrisAdminObjects/models/APIAttribute.js',
+        'opstools/HrisAdminObjects/views/AttrList/AttrList.ejs',
+        'opstools/HrisAdminObjects/views/AttrList/item.ejs',
 function(){
 
 
-    if (typeof AD.controllers.opstools == 'undefined') AD.controllers.opstools = {};
-    if (typeof AD.controllers.opstools.HrisAdminObjects == 'undefined') AD.controllers.opstools.HrisAdminObjects = {};
-    AD.controllers.opstools.HrisAdminObjects.AttrList = can.Control.extend({
+    AD.Control.extend('opstools.HrisAdminObjects.AttrList', {
 
 
         init: function( element, options ) {
             var self = this;
             this.options = AD.defaults({
-                    templateDOM: '//opstools/HrisAdminObjects/views/AttrList/AttrList.ejs',
+                    templateDOM: '//opstools/HrisAdminObjects/views/AttrList/AttrList.ejs'
             }, options);
 
             this.dataSource = this.options.dataSource; // AD.models.Projects;
@@ -30,12 +30,12 @@ function(){
             // listen for resize notifications
             AD.comm.hub.subscribe('hrisadminobjects.resize', function (key, data) {
 
-//				self.element.css("height", (data.height/2) + "px");
+//              self.element.css("height", (data.height/2) + "px");
 
-//				var mastheadHeight = self.element.find(".hris-widget-masthead").outerHeight(true);
-				self.list.resize(data.height/2);
+//              var mastheadHeight = self.element.find(".hris-widget-masthead").outerHeight(true);
+                self.list.resize(data.height/2);
 
-//				self.element.find(".hris-widget-inner").css("padding-top", (mastheadHeight+5) + "px");
+//              self.element.find(".hris-widget-inner").css("padding-top", (mastheadHeight+5) + "px");
             });
 
 
@@ -92,7 +92,7 @@ function(){
 
 
             this.element.html(can.view(this.options.templateDOM, {} ));
-            this.list = new AD.controllers.GenericList(this.element.find('.hris-list-attribute'), {
+            this.list = new AD.controllers.GenericList(this.element.find('.hrisadminobject-list-attribute'), {
                 title:'Attributes',
                 description: '<em>Attributes</em> belong to <em>Attribute Sets</em> and represent properties of an object.',
 //                dataSource:[],  //this.dataSource,
@@ -107,10 +107,9 @@ function(){
         '.ad-item-add click': function($el, ev) {
 
             ev.preventDefault();
-        },
+        }
 
 
     });
-
 
 });
