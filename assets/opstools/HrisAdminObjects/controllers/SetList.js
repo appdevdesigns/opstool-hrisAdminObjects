@@ -2,8 +2,10 @@
 steal(
         // List your Controller's dependencies here:
         'appdev',
-        'js/GenericList.js',
+        'GenericList.js',  // provided by OpsPortal
         'opstools/HrisAdminObjects/models/APIAttributeSet.js',
+        'opstools/HrisAdminObjects/views/SetList/SetList.ejs',
+        'opstools/HrisAdminObjects/views/SetList/item.ejs',
 function(){
 
 
@@ -12,7 +14,7 @@ function(){
         init: function( element, options ) {
             var self = this;
             this.options = AD.defaults({
-                    templateDOM: '//opstools/HrisAdminObjects/views/SetList/SetList.ejs',
+                    templateDOM: '//opstools/HrisAdminObjects/views/SetList/SetList.ejs'
             }, options);
 
             this.dataSource = this.options.dataSource; // AD.models.Projects;
@@ -88,7 +90,7 @@ function(){
         '.ad-item-add click': function($el, ev) {
 
             ev.preventDefault();
-        },
+        }
 
 
     });
