@@ -2,21 +2,11 @@
 steal(
         // List your Controller's dependencies here:
         'appdev',
-
-//        'ToolHrisAdminObjects/models/Projects.js',
-//        'appdev/widgets/ad_delete_ios/ad_delete_ios.js',
-//        'ToolHrisAdminObjects/views/ToolHrisAdminObjects/ToolHrisAdminObjects.ejs',
+        'OpsPortal/classes/OpsTool.js',
+        'opstools/HrisAdminObjects/views/HrisAdminObjects/HrisAdminObjects.ejs',
 function(){
 
-
-    // Namespacing conventions:
-    // AD.controllers.opstools.[Tool].Tool  --> main controller for tool
-    // AD.controllers.opstools.[Tool].[controller] --> sub controllers for tool
-    // AD.controllers.opstools.HrisAdminObjects.Tool = can.Control.extend({
-
-    if (typeof AD.controllers.opstools == 'undefined') AD.controllers.opstools = {};
-    if (typeof AD.controllers.opstools.HrisAdminObjects == 'undefined') AD.controllers.opstools.HrisAdminObjects = {};
-    AD.controllers.opstools.HrisAdminObjects.Tool = AD.classes.opsportal.OpsTool.extend({
+    AD.Control.OpsTool.extend('HrisAdminObjects', {
 
         init: function( element, options ) {
             var self = this;
@@ -100,7 +90,7 @@ function(){
         '.ad-item-add click': function($el, ev) {
 
             ev.preventDefault();
-        },
+        }
 
 
     });

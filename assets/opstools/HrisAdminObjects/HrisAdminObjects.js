@@ -1,6 +1,6 @@
 steal(
         // List your Page's dependencies here:
-        'appdev/appdev.js',
+        // 'appdev',
         '//opstools/HrisAdminObjects/hrisAdminObjects.css'
 ).then(
         "opstools/HrisAdminObjects/controllers/ObjectList.js",
@@ -9,7 +9,7 @@ steal(
         "opstools/HrisAdminObjects/controllers/FormAttrNew.js",
         "opstools/HrisAdminObjects/controllers/FormObjectNew.js",
         "opstools/HrisAdminObjects/controllers/FormSetNew.js",
-        "site/labels/HrisAdminObjects"
+        "site/labels/HrisAdminObjects.js"
 ).then(
         "opstools/HrisAdminObjects/controllers/HrisAdminObjects.js"
 ).then(function(){

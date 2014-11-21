@@ -1,12 +1,14 @@
 
 steal(
         // List your Controller's dependencies here:
-        'appdev',
+        // 'appdev',
 //        'HrisUI/models/Projects.js',
 //        'appdev/widgets/ad_delete_ios/ad_delete_ios.js',
 //        'HrisUI/views/ObjectList/ObjectList.ejs',
         '//js/GenericList.js',
         '//opstools/HrisAdminObjects/models/APIObject.js',
+        'opstools/HrisAdminObjects/views/ObjectList/ObjectList.ejs',
+        'opstools/HrisAdminObjects/views/ObjectList/item.ejs',
 function(){
 
 
@@ -16,7 +18,7 @@ function(){
         init: function( element, options ) {
             var self = this;
             this.options = AD.defaults({
-                    templateDOM: '//opstools/HrisAdminObjects/views/ObjectList/ObjectList.ejs',
+                    templateDOM: '//opstools/HrisAdminObjects/views/ObjectList/ObjectList.ejs'
             }, options);
 
 
