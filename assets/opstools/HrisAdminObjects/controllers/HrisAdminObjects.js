@@ -17,8 +17,9 @@ function(){
             }, options);
             this.options = options;
 
-            // Call parent init
-            AD.classes.opsportal.OpsTool.prototype.init.apply(this, arguments);
+            // call parent init()
+            this._super(element, options);
+
 
             this.dataSource = this.options.dataSource; // AD.models.Projects;
 
@@ -26,12 +27,12 @@ function(){
 
             this.initDOM();
 
-            new AD.controllers.opstools.HrisAdminObjects.ObjectList(this.element.find('.hrisadminobject-object-widget'), {});
-            new AD.controllers.opstools.HrisAdminObjects.SetList(this.element.find('.hrisadminobject-set-widget'), {});
-            new AD.controllers.opstools.HrisAdminObjects.AttrList(this.element.find('.hrisadminobject-attr-widget'), {});
-            new AD.controllers.opstools.HrisAdminObjects.FormObjectNew(this.element.find('.tool-hrisadminobject-form-object-new'), {});
-            new AD.controllers.opstools.HrisAdminObjects.FormSetNew(this.element.find('.tool-hrisadminobject-form-set-new'), {});
-            new AD.controllers.opstools.HrisAdminObjects.FormAttrNew(this.element.find('.tool-hrisadminobject-form-attribute-new'), {});
+            new AD.Control.get('opstools.HrisAdminObjects.ObjectList')(this.element.find('.hrisadminobject-object-widget'), {});
+            new AD.Control.get('opstools.HrisAdminObjects.SetList')(this.element.find('.hrisadminobject-set-widget'), {});
+            new AD.Control.get('opstools.HrisAdminObjects.AttrList')(this.element.find('.hrisadminobject-attr-widget'), {});
+            new AD.Control.get('opstools.HrisAdminObjects.FormObjectNew')(this.element.find('.tool-hrisadminobject-form-object-new'), {});
+            new AD.Control.get('opstools.HrisAdminObjects.FormSetNew')(this.element.find('.tool-hrisadminobject-form-set-new'), {});
+            new AD.Control.get('opstools.HrisAdminObjects.FormAttrNew')(this.element.find('.tool-hrisadminobject-form-attribute-new'), {});
 
 			this.element.find('.tt').tooltip(options);
 			this.element.find('.tt-field').tooltip({placement: 'left'});

@@ -17,6 +17,9 @@ function(){
                     templateDOM: '//opstools/HrisAdminObjects/views/SetList/SetList.ejs'
             }, options);
 
+            // call parent init()
+            this._super(element, options);
+
             this.dataSource = this.options.dataSource; // AD.models.Projects;
 
             this.current = {};

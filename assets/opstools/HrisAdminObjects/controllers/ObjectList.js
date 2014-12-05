@@ -21,6 +21,9 @@ function(){
                     templateDOM: '//opstools/HrisAdminObjects/views/ObjectList/ObjectList.ejs'
             }, options);
 
+            // call parent init()
+            this._super(element, options);
+
 
             this.initDOM();
 
