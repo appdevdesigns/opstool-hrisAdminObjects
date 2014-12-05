@@ -4,7 +4,7 @@ steal(
 ).then( function(){
 
 
-    AD.models.APIObject = AD.models_base.APIObject.extend({
+    AD.Model.extend('APIObject', { 
 /*
          findAll: 'GET /apiobject',
         findOne: 'GET /apiobject/{id}',
