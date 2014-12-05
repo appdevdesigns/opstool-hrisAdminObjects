@@ -4,7 +4,8 @@ steal(
 ).then( function(){
 
 
-    AD.models.APIAttributeSet = AD.models_base.APIAttributeSet.extend({
+    // AD.models.APIAttributeSet = AD.models_base.APIAttributeSet.extend({
+    AD.Model.extend('APIAttributeSet', { 
 /*
          findAll: 'GET /apiattributeset',
         findOne: 'GET /apiattributeset/{id}',

@@ -14,6 +14,9 @@ function(){
                     templateDOM: '//opstools/HrisAdminObjects/views/FormObjectNew/FormObjectNew.ejs'
             }, options);
 
+            // call parent init()
+            this._super(element, options);
+
             this.dataSource = this.options.dataSource; // AD.models.Projects;
 
             this.element.hide();
