@@ -1,7 +1,7 @@
 steal(
         'appdev',
-        'opstools/HrisAdminObjects/models/base/APIObject.js'
-).then( function(){
+        'opstools/HrisAdminObjects/models/base/APIObject.js',
+function(){
 
 
     AD.Model.extend('APIObject', { 

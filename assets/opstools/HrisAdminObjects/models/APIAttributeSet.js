@@ -1,7 +1,7 @@
 steal(
         'appdev',
-        'opstools/HrisAdminObjects/models/base/APIAttributeSet.js'
-).then( function(){
+        'opstools/HrisAdminObjects/models/base/APIAttributeSet.js',
+function(){
 
 
     // AD.models.APIAttributeSet = AD.models_base.APIAttributeSet.extend({

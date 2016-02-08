@@ -11,7 +11,7 @@ function(){
         init: function( element, options ) {
             var self = this;
             options = AD.defaults({
-                    templateDOM: '//opstools/HrisAdminObjects/views/HrisAdminObjects/HrisAdminObjects.ejs',
+                    templateDOM: '/opstools/HrisAdminObjects/views/HrisAdminObjects/HrisAdminObjects.ejs',
                     resize_notification: 'hrisadminobjects.resize',
                     tool:null   // the parent opsPortal Tool() object
             }, options);

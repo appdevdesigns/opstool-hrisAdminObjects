@@ -14,7 +14,7 @@ function(){
         init: function( element, options ) {
             var self = this;
             this.options = AD.defaults({
-                    templateDOM: '//opstools/HrisAdminObjects/views/SetList/SetList.ejs'
+                    templateDOM: '/opstools/HrisAdminObjects/views/SetList/SetList.ejs'
             }, options);
 
             // call parent init()

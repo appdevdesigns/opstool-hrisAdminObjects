@@ -12,7 +12,7 @@ function(){
         init: function( element, options ) {
             var self = this;
             this.options = AD.defaults({
-                    templateDOM: '//opstools/HrisAdminObjects/views/FormSetNew/FormSetNew.ejs'
+                    templateDOM: '/opstools/HrisAdminObjects/views/FormSetNew/FormSetNew.ejs'
             }, options);
 
             // call parent init()
