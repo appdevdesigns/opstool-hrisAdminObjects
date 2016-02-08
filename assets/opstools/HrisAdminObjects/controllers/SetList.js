@@ -2,7 +2,7 @@
 steal(
         // List your Controller's dependencies here:
         'appdev',
-        'GenericList.js',  // provided by OpsPortal
+        'js/GenericList.js',  // provided by OpsPortal
         'opstools/HrisAdminObjects/models/APIAttributeSet.js',
         'opstools/HrisAdminObjects/views/SetList/SetList.ejs',
         'opstools/HrisAdminObjects/views/SetList/item.ejs',
