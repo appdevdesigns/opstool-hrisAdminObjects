@@ -1,20 +1,25 @@
-module.exports={
-    // map: {
-    // },
-    // paths: {
-    // },
-    shim : {
+module.exports = {
+    "paths": {
+        'opstools/hrisAdminObjects': 'opstools/HrisAdminObjects/HrisAdminObjects.js'
+    },
+    "bundle": ['opstools/hrisAdminObjects'],
+    "meta": {
+        "opstools/hrisAdminObjects": {
+            "deps": [
+                "opstools/HrisAdminObjects/hrisAdminObjects.css",
 
-        //// Don't include our labels in our production.js
-        'site/labels/HrisAdminObjects.js' : { packaged:false, ignore:true }
+                "opstools/HrisAdminObjects/controllers/AttrList",
+                "opstools/HrisAdminObjects/controllers/FormAttrNew",
+                "opstools/HrisAdminObjects/controllers/FormObjectNew",
+                "opstools/HrisAdminObjects/controllers/FormSetNew",
+                "opstools/HrisAdminObjects/controllers/HrisAdminObjects",
+                "opstools/HrisAdminObjects/controllers/ObjectList",
+                "opstools/HrisAdminObjects/controllers/SetList",
+
+                "opstools/HrisAdminObjects/models/APIAttribute",
+                "opstools/HrisAdminObjects/models/APIAttributeSet",
+                "opstools/HrisAdminObjects/models/APIObject",
+            ]
+        }
     }
-    // ext: {
-    //     js: "js",
-    //     css: "css",
-    //     less: "steal/less/less.js",
-    //     coffee: "steal/coffee/coffee.js",
-    // }
 };
-    
-
-
