@@ -1,10 +1,10 @@
 module.exports = {
     "paths": {
-        'opstools/hrisAdminObjects': 'opstools/HrisAdminObjects/HrisAdminObjects.js'
+        'opstools/HrisAdminObjects': 'opstools/HrisAdminObjects/HrisAdminObjects.js'
     },
-    "bundle": ['opstools/hrisAdminObjects'],
+    "bundle": ['opstools/HrisAdminObjects'],
     "meta": {
-        "opstools/hrisAdminObjects": {
+        "opstools/HrisAdminObjects": {
             "deps": [
                 "opstools/HrisAdminObjects/hrisAdminObjects.css",
 
