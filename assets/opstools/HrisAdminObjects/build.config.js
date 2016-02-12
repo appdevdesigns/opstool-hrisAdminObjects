@@ -1,16 +1,25 @@
-module.exports={
-    "map": {
-        "jquery/jquery" : "jquery",
-    },
+module.exports = {
     "paths": {
-        "jquery" : "js/jquery.min.js",                  // 'http://code.jquery.com/jquery-1.11.1.min.js'
+        'opstools/hrisAdminObjects': 'opstools/HrisAdminObjects/HrisAdminObjects.js'
     },
-    "ext": {
-        "ejs": "can/view/ejs/system"
-    },
-    "buildConfig": {
-        "map": {
-            "can/util/util": "can/util/domless/domless"
+    "bundle": ['opstools/hrisAdminObjects'],
+    "meta": {
+        "opstools/hrisAdminObjects": {
+            "deps": [
+                "opstools/HrisAdminObjects/hrisAdminObjects.css",
+
+                "opstools/HrisAdminObjects/controllers/AttrList",
+                "opstools/HrisAdminObjects/controllers/FormAttrNew",
+                "opstools/HrisAdminObjects/controllers/FormObjectNew",
+                "opstools/HrisAdminObjects/controllers/FormSetNew",
+                "opstools/HrisAdminObjects/controllers/HrisAdminObjects",
+                "opstools/HrisAdminObjects/controllers/ObjectList",
+                "opstools/HrisAdminObjects/controllers/SetList",
+
+                "opstools/HrisAdminObjects/models/APIAttribute",
+                "opstools/HrisAdminObjects/models/APIAttributeSet",
+                "opstools/HrisAdminObjects/models/APIObject",
+            ]
         }
     }
 };

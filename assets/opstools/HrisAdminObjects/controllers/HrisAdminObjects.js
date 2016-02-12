@@ -1,11 +1,14 @@
 
 steal(
         // List your Controller's dependencies here:
-        'appdev',
-        'OpsPortal/classes/OpsTool.js',
         'opstools/HrisAdminObjects/views/HrisAdminObjects/HrisAdminObjects.ejs',
 function(){
-
+System.import('appdev').then(function() {
+    steal.import('appdev/ad',
+                        'appdev/control/control',
+                        'appdev/comm/hub',
+                        'OpsPortal/classes/OpsTool').then(function() {
+                            
     AD.Control.OpsTool.extend('HrisAdminObjects', {
 
         init: function( element, options ) {
@@ -99,4 +102,6 @@ function(){
     });
 
 
+});
+});
 });

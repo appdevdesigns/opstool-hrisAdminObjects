@@ -1,8 +1,9 @@
 steal(
-        'appdev',
         'opstools/HrisAdminObjects/models/base/APIObject.js',
 function(){
-
+System.import('appdev').then(function() {
+    steal.import('appdev/ad',
+                    'appdev/model/model').then(function(){
 
     AD.Model.extend('APIObject', { 
 /*
@@ -25,4 +26,6 @@ function(){
     });
 
 
+});
+});
 });

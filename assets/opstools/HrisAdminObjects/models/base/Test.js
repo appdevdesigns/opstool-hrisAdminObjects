@@ -1,6 +1,6 @@
-steal(
-        'appdev',
-function(){
+System.import('appdev').then(function() {
+    steal.import('appdev/ad',
+                    'appdev/model/model').then(function(){
 
     // Namespacing conventions:
     // AD.Model.Base.extend("[application].[Model]" , { static }, {instance} );  --> Object
@@ -31,4 +31,5 @@ function(){
     });
 
 
+});
 });

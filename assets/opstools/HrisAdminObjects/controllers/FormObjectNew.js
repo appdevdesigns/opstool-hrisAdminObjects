@@ -1,10 +1,12 @@
 
 steal(
         // List your Controller's dependencies here:
-        'appdev',
         'opstools/HrisAdminObjects/views/FormObjectNew/FormObjectNew.ejs',
 function(){
-
+System.import('appdev').then(function() {
+    steal.import('appdev/ad',
+                        'appdev/control/control',
+                        'appdev/comm/hub').then(function() {
 
     AD.Control.extend('opstools.HrisAdminObjects.FormObjectNew', {
 
@@ -61,4 +63,6 @@ function(){
     });
 
 
+});
+});
 });
