@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/appdevdesigns/opstool-hrisAdminObjects",
   "dependencies": {
-    "ad-utils": "git://github.com/appdevdesigns/ad-utils#develop" // Use develop branch for test
+    "ad-utils": "git://github.com/appdevdesigns/ad-utils#develop"
   },
   "devDependencies": {
     "chai": "^1.9.1",
