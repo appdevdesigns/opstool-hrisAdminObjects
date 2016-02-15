@@ -1,7 +1,6 @@
-steal(
-        'appdev'
-).then( function(){
-
+System.import('appdev').then(function() {
+    steal.import('appdev/ad',
+                    'appdev/model/model').then(function(){
 
     AD.Model.Base.extend('APIObject', { 
         findAll: 'GET /opstool-hrisAdminObjects/apiobject/find',
@@ -33,4 +32,5 @@ steal(
     });
 
 
+});
 });

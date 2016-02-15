@@ -1,10 +1,12 @@
 
 steal(
         // List your Controller's dependencies here:
-        'appdev',
         'opstools/HrisAdminObjects/views/FormSetNew/FormSetNew.ejs',
 function(){
-
+System.import('appdev').then(function() {
+    steal.import('appdev/ad',
+                        'appdev/control/control',
+                        'appdev/comm/hub').then(function() {
 
 
     AD.Control.extend('opstools.HrisAdminObjects.FormSetNew', {
@@ -12,7 +14,7 @@ function(){
         init: function( element, options ) {
             var self = this;
             this.options = AD.defaults({
-                    templateDOM: '//opstools/HrisAdminObjects/views/FormSetNew/FormSetNew.ejs'
+                    templateDOM: '/opstools/HrisAdminObjects/views/FormSetNew/FormSetNew.ejs'
             }, options);
 
             // call parent init()
@@ -62,4 +64,6 @@ function(){
     });
 
 
+});
+});
 });
