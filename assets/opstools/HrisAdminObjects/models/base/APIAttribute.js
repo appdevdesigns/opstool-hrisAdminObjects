@@ -1,6 +1,6 @@
-steal(
-        'appdev'
-).then( function(){
+System.import('appdev').then(function() {
+    steal.import('appdev/ad',
+                    'appdev/model/model').then(function(){
 
 
     AD.Model.Base.extend('APIAttribute', { 
@@ -36,4 +36,5 @@ steal(
     });
 
 
+});
 });
