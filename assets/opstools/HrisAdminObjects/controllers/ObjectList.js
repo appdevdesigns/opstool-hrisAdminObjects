@@ -5,11 +5,15 @@ steal(
 //        'HrisUI/models/Projects.js',
 //        'appdev/widgets/ad_delete_ios/ad_delete_ios.js',
 //        'HrisUI/views/ObjectList/ObjectList.ejs',
-        '//js/GenericList.js',
-        '//opstools/HrisAdminObjects/models/APIObject.js',
+        'opstools/HrisAdminObjects/models/APIObject.js',
         'opstools/HrisAdminObjects/views/ObjectList/ObjectList.ejs',
         'opstools/HrisAdminObjects/views/ObjectList/item.ejs',
 function(){
+System.import('appdev').then(function() {
+    steal.import('appdev/ad',
+                        'appdev/control/control',
+                        'appdev/comm/hub',
+                        'js/GenericList').then(function() {
 
 
     AD.Control.extend('opstools.HrisAdminObjects.ObjectList', {
@@ -18,7 +22,7 @@ function(){
         init: function( element, options ) {
             var self = this;
             this.options = AD.defaults({
-                    templateDOM: '//opstools/HrisAdminObjects/views/ObjectList/ObjectList.ejs'
+                    templateDOM: '/opstools/HrisAdminObjects/views/ObjectList/ObjectList.ejs'
             }, options);
 
             // call parent init()
@@ -75,7 +79,7 @@ function(){
                 title:'Objects',
                 description: '<em>Objects</em> lets you add, delete, and configure the objects available in the HRIS system.',
 //                dataSource:[],  //this.dataSource,
-                templateItem:'//opstools/HrisAdminObjects/views/ObjectList/item.ejs',
+                templateItem:'/opstools/HrisAdminObjects/views/ObjectList/item.ejs',
                 notification_selected:'hris.object.selected',
                 onAdd:function() { self.addItem();  }
             });
@@ -107,4 +111,6 @@ function(){
     });
 
 
+});
+});
 });

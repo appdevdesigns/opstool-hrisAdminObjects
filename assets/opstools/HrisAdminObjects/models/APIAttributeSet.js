@@ -1,8 +1,9 @@
 steal(
-        'appdev',
-        'opstools/HrisAdminObjects/models/base/APIAttributeSet.js'
-).then( function(){
-
+        'opstools/HrisAdminObjects/models/base/APIAttributeSet.js',
+function(){
+System.import('appdev').then(function() {
+    steal.import('appdev/ad',
+                    'appdev/model/model').then(function(){
 
     // AD.models.APIAttributeSet = AD.models_base.APIAttributeSet.extend({
     AD.Model.extend('APIAttributeSet', { 
@@ -26,4 +27,6 @@ steal(
     });
 
 
+});
+});
 });

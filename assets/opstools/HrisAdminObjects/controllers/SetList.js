@@ -1,12 +1,15 @@
 
 steal(
         // List your Controller's dependencies here:
-        'appdev',
-        'GenericList.js',  // provided by OpsPortal
         'opstools/HrisAdminObjects/models/APIAttributeSet.js',
         'opstools/HrisAdminObjects/views/SetList/SetList.ejs',
         'opstools/HrisAdminObjects/views/SetList/item.ejs',
 function(){
+System.import('appdev').then(function() {
+    steal.import('appdev/ad',
+                        'appdev/control/control',
+                        'appdev/comm/hub',
+                        'js/GenericList').then(function() {
 
 
     AD.Control.extend('opstools.HrisAdminObjects.SetList', {
@@ -14,7 +17,7 @@ function(){
         init: function( element, options ) {
             var self = this;
             this.options = AD.defaults({
-                    templateDOM: '//opstools/HrisAdminObjects/views/SetList/SetList.ejs'
+                    templateDOM: '/opstools/HrisAdminObjects/views/SetList/SetList.ejs'
             }, options);
 
             // call parent init()
@@ -99,4 +102,6 @@ function(){
     });
 
 
+});
+});
 });
