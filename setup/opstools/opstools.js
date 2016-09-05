@@ -7,11 +7,11 @@ module.exports = [
 
     { 
         key:'hris.adminobjects', 
-        permissions:'adcore.developer, hrisadmin.objects', 
+        permissions:'hrisadmin.objects', 
         icon:'fa-wrench', 
         controller:'HrisAdminObjects',
-        label:'opp.toolObjectBuilder',
-        context:'opsportal',
+        label:'Hris Admin Object - demo',
+        // context:'opsportal',
         isController:true, 
         options:{}, 
         version:'0' 
