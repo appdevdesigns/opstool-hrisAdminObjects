@@ -7,7 +7,7 @@ module.exports = [
 
     { 
         key:'hris.adminobjects', 
-        permissions:'hrisadmin.objects', 
+        permissions:'hrisadmin.objects.view', 
         icon:'fa-wrench', 
         controller:'HrisAdminObjects',
         label:'Hris Admin Object - demo',
