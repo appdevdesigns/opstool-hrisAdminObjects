@@ -35,7 +35,7 @@ steal(
 
 
                             // listen for resize notifications
-                            AD.comm.hub.subscribe('hrisadminobjects.resize', function (key, data) {
+                            var idResize = AD.comm.hub.subscribe('hrisadminobjects.resize', function (key, data) {
 
                                 //              self.element.css("height", (data.height/2) + "px");
 

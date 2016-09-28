@@ -52,15 +52,21 @@ System.import('appdev').then(function() {
 
 
             // listen for resize notifications
-            AD.comm.hub.subscribe('hrisadminobjects.resize', function (key, data) {
-                // this is a half height list:
-                // so at most our list should take up:
-                self.element.css("height", (data.height/2) + "px");
-				//self.element.find('.hris-nav-list').css("height", data.height/2 + "px");
-//				var mastheadHeight = self.element.find(".hris-widget-masthead").outerHeight(true);
-				self.list.resize(data.height/2);
+            var idResize = AD.comm.hub.subscribe('hrisadminobjects.resize', function (key, data) {
 
-//				self.element.find(".hris-widget-inner").css("padding-top", (mastheadHeight+5) + "px");
+                if (self.element) {
+                    
+                    // this is a half height list:
+                    // so at most our list should take up:
+                    self.element.css("height", (data.height/2) + "px");
+    				//self.element.find('.hris-nav-list').css("height", data.height/2 + "px");
+    //				var mastheadHeight = self.element.find(".hris-widget-masthead").outerHeight(true);
+    				self.list.resize(data.height/2);
+
+    //				self.element.find(".hris-widget-inner").css("padding-top", (mastheadHeight+5) + "px");
+                } else {
+                    AD.comm.hub.unsubscribe(idResize);
+                }
             });
 
         },

@@ -43,15 +43,21 @@ System.import('appdev').then(function() {
 
 
             // listen for resize notifications
-            AD.comm.hub.subscribe('hrisadminobjects.resize', function (key, data) {
-                self.element.css("height", data.height + "px");
+            var idResize = AD.comm.hub.subscribe('hrisadminobjects.resize', function (key, data) {
 
-                // the height of our list should be the height of our portal - height of our bottom buttons
+                if (self.element) { 
 
-				var buttonHeight = self.element.find(".opsportal-widget-nav-sub").outerHeight(true);
-				self.list.resize(data.height - buttonHeight);
+                    self.element.css("height", data.height + "px");
+
+                    // the height of our list should be the height of our portal - height of our bottom buttons
+
+    				var buttonHeight = self.element.find(".opsportal-widget-nav-sub").outerHeight(true);
+    				self.list.resize(data.height - buttonHeight);
 
 //				self.element.find(".hris-widget-inner").css("padding-top", (mastheadHeight+5) + "px");
+                } else {
+                    AD.comm.hub.unsubscribe(idResize);
+                }
 
             });
 

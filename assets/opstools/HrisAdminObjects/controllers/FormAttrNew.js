@@ -28,19 +28,27 @@ function(){
             this.initDOM();
 
 			// listen for resize notifications
-            AD.comm.hub.subscribe('opsportal.resize', function (key, data) {
+            var idResize = AD.comm.hub.subscribe('opsportal.resize', function (key, data) {
 
-				self.element.find(".opsportal-stage-container").css("height", data.height + "px");
+                if ( self.element) {
+    				self.element.find(".opsportal-stage-container").css("height", data.height + "px");
+                } else {
+                    AD.comm.hub.unsubscribe(idResize);
+                }
 				
             });
 
             // listen for any hris.form request
-            AD.comm.hub.subscribe('hris.form.**', function(key, data) {
+            var idForm = AD.comm.hub.subscribe('hris.form.**', function(key, data) {
 
-                if (key == 'hris.form.attribute.new') {
-                    self.element.show();
+                if ( self.element) {
+                    if (key == 'hris.form.attribute.new') {
+                        self.element.show();
+                    } else {
+                        self.element.hide();
+                    }
                 } else {
-                    self.element.hide();
+                    AD.comm.hub.unsubscribe(idForm);
                 }
             })
 
